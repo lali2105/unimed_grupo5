@@ -249,7 +249,12 @@
 				"inputs": [
 					{
 						"referenceName": "DS_VENTA1_XLS",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"zona": "raw",
+							"directorio": "unimed/venta",
+							"archivo": "ALFARO_2021.xlsx"
+						}
 					}
 				],
 				"outputs": [
