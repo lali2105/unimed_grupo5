@@ -258,7 +258,7 @@
 						"type": "DatasetReference",
 						"parameters": {
 							"zona": "master",
-							"directorio": "unimed/venta",
+							"directorio": "unimed",
 							"archivo": "venta1.parquet"
 						}
 					}
