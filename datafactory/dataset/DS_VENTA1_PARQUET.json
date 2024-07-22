@@ -2,7 +2,7 @@
 	"name": "DS_VENTA1_PARQUET",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "LS_ADLS_EXCEL",
+			"referenceName": "LS_ADLS_PARQUET",
 			"type": "LinkedServiceReference"
 		},
 		"parameters": {
@@ -20,7 +20,19 @@
 		"type": "Parquet",
 		"typeProperties": {
 			"location": {
-				"type": "AzureBlobFSLocation"
+				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "@dataset().archivo",
+					"type": "Expression"
+				},
+				"folderPath": {
+					"value": "@dataset().directorio",
+					"type": "Expression"
+				},
+				"fileSystem": {
+					"value": "@dataset().zona",
+					"type": "Expression"
+				}
 			},
 			"compressionCodec": "snappy"
 		},
