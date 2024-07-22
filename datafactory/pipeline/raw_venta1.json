@@ -5,6 +5,8 @@
 			{
 				"name": "Cargaventa",
 				"type": "Copy",
+				"state": "Inactive",
+				"onInactiveMarkAs": "Succeeded",
 				"dependsOn": [],
 				"policy": {
 					"timeout": "0.12:00:00",
@@ -62,6 +64,74 @@
 							"zona": "master",
 							"directorio": "unimed",
 							"archivo": "venta1.parquet"
+						}
+					}
+				]
+			},
+			{
+				"name": "Ingesta",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "AzureBlobFSReadSettings",
+							"recursive": true,
+							"enablePartitionDiscovery": false
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings"
+						}
+					},
+					"sink": {
+						"type": "ParquetSink",
+						"storeSettings": {
+							"type": "AzureBlobFSWriteSettings",
+							"maxConcurrentConnections": 2,
+							"copyBehavior": "PreserveHierarchy"
+						},
+						"formatSettings": {
+							"type": "ParquetWriteSettings"
+						}
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "DS_VENTA01",
+						"type": "DatasetReference",
+						"parameters": {
+							"zona": "raw",
+							"directorio": "unimed/venta",
+							"archivo": "ALFARO_2021_f.csv"
+						}
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "DS_VENTA1_PARQUET",
+						"type": "DatasetReference",
+						"parameters": {
+							"zona": "master",
+							"directorio": "unimed",
+							"archivo": "ventacsv.parquet"
 						}
 					}
 				]
