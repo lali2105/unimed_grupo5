@@ -17,19 +17,6 @@
 				"typeProperties": {
 					"source": {
 						"type": "ExcelSource",
-						"additionalColumns": [
-							{
-								"name": "FECREGISTRO",
-								"value": {
-									"value": "@utcnow()",
-									"type": "Expression"
-								}
-							},
-							{
-								"name": "OWNER",
-								"value": "GRUPO5"
-							}
-						],
 						"storeSettings": {
 							"type": "AzureBlobFSReadSettings",
 							"recursive": true,
@@ -41,16 +28,7 @@
 						"storeSettings": {
 							"type": "AzureBlobFSWriteSettings",
 							"maxConcurrentConnections": 2,
-							"copyBehavior": "PreserveHierarchy",
-							"metadata": [
-								{
-									"name": "feccarga",
-									"value": {
-										"value": "@utcnow()",
-										"type": "Expression"
-									}
-								}
-							]
+							"copyBehavior": "PreserveHierarchy"
 						},
 						"formatSettings": {
 							"type": "ParquetWriteSettings"
