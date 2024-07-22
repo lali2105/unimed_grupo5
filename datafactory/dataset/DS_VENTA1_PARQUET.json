@@ -2,7 +2,7 @@
 	"name": "DS_VENTA1_PARQUET",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "LS_ADLS_PARQUET",
+			"referenceName": "LS_ADLS_EXCEL",
 			"type": "LinkedServiceReference"
 		},
 		"parameters": {

@@ -25,6 +25,9 @@
 					},
 					"sink": {
 						"type": "ParquetSink",
+						"storeSettings": {
+							"type": "AzureBlobFSWriteSettings"
+						},
 						"formatSettings": {
 							"type": "ParquetWriteSettings"
 						}
