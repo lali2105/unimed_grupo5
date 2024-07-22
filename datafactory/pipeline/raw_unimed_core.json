@@ -39,7 +39,17 @@
 					"sink": {
 						"type": "ParquetSink",
 						"storeSettings": {
-							"type": "AzureBlobFSWriteSettings"
+							"type": "AzureBlobFSWriteSettings",
+							"copyBehavior": "PreserveHierarchy",
+							"metadata": [
+								{
+									"name": "feccarga",
+									"value": {
+										"value": "@utcnow()",
+										"type": "Expression"
+									}
+								}
+							]
 						},
 						"formatSettings": {
 							"type": "ParquetWriteSettings"
@@ -244,7 +254,12 @@
 				"outputs": [
 					{
 						"referenceName": "DS_VENTA1_PARQUET",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"zona": "master",
+							"directorio": "unimed/venta",
+							"archivo": "venta1.parquet"
+						}
 					}
 				]
 			}
