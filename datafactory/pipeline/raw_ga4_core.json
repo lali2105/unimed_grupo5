@@ -1,0 +1,11 @@
+{
+	"name": "raw_ga4_core",
+	"properties": {
+		"folder": {
+			"name": "01_raw_source"
+		},
+		"annotations": [],
+		"lastPublishTime": "2024-07-22T00:37:22Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

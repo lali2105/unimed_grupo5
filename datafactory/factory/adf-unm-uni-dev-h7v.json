@@ -1,0 +1,9 @@
+{
+	"name": "adf-unm-uni-dev-h7v",
+	"location": "eastus2",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "ade43cc2-331f-409e-acb4-8ed0cb5e18c8",
+		"tenantId": "3705cdfe-1991-48fc-9579-b0da85eec9ee"
+	}
+}
