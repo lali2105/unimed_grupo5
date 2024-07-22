@@ -1,0 +1,22 @@
+{
+	"name": "DS_VENTA1_XLS",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_ADLS_EXCEL",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Excel",
+		"typeProperties": {
+			"sheetName": "Export",
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "ALFARO_2020.xlsx",
+				"folderPath": "unimed/venta",
+				"fileSystem": "raw"
+			},
+			"firstRowAsHeader": true
+		},
+		"schema": []
+	}
+}
