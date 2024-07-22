@@ -19,6 +19,7 @@
 		"annotations": [],
 		"type": "Excel",
 		"typeProperties": {
+			"sheetName": "Export",
 			"location": {
 				"type": "AzureBlobFSLocation",
 				"fileName": {
