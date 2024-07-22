@@ -259,7 +259,7 @@
 						"parameters": {
 							"zona": "master",
 							"directorio": "unimed",
-							"archivo": "venta1.parquet"
+							"archivo": "venta"
 						}
 					}
 				]

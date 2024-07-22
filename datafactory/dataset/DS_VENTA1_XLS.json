@@ -5,15 +5,34 @@
 			"referenceName": "LS_ADLS_EXCEL",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"zona": {
+				"type": "string"
+			},
+			"directorio": {
+				"type": "string"
+			},
+			"archivo": {
+				"type": "string"
+			}
+		},
 		"annotations": [],
 		"type": "Excel",
 		"typeProperties": {
-			"sheetName": "Export",
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": "ALFARO_2020.xlsx",
-				"folderPath": "unimed/venta",
-				"fileSystem": "raw"
+				"fileName": {
+					"value": "@dataset().archivo",
+					"type": "Expression"
+				},
+				"folderPath": {
+					"value": "@dataset().directorio",
+					"type": "Expression"
+				},
+				"fileSystem": {
+					"value": "@dataset().zona",
+					"type": "Expression"
+				}
 			},
 			"firstRowAsHeader": true
 		},
