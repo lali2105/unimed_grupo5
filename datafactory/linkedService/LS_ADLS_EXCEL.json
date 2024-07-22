@@ -1,0 +1,11 @@
+{
+	"name": "LS_ADLS_EXCEL",
+	"properties": {
+		"description": "CONECCION A EXCEL",
+		"annotations": [],
+		"type": "AzureBlobFS",
+		"typeProperties": {
+			"url": "https://dlsunmunidevv6q.dfs.core.windows.net/"
+		}
+	}
+}
