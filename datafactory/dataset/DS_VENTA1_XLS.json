@@ -37,6 +37,59 @@
 			},
 			"firstRowAsHeader": true
 		},
-		"schema": []
+		"schema": [
+			{
+				"name": "FECHA",
+				"type": "String"
+			},
+			{
+				"name": "DISTRIBUIDOR",
+				"type": "String"
+			},
+			{
+				"name": "GP",
+				"type": "String"
+			},
+			{
+				"name": "ST",
+				"type": "String"
+			},
+			{
+				"name": "FAMILIA",
+				"type": "String"
+			},
+			{
+				"name": "COD_SAP",
+				"type": "String"
+			},
+			{
+				"name": "DESC_SAP",
+				"type": "String"
+			},
+			{
+				"name": "RUC",
+				"type": "String"
+			},
+			{
+				"name": "CLIENTE",
+				"type": "String"
+			},
+			{
+				"name": "ZONA",
+				"type": "String"
+			},
+			{
+				"name": "TIPO_VTA",
+				"type": "String"
+			},
+			{
+				"name": "TIPO_DATO",
+				"type": "String"
+			},
+			{
+				"name": "VALOR",
+				"type": "String"
+			}
+		]
 	}
 }
